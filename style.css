@@ -66,10 +66,13 @@ header nav ul li a:hover {
 
 main {
   flex: 3; /*カードの列 */
-  display: flex;
   flex-wrap: wrap;
   height: auto;
   justify-content: flex-start; /*カードを上に詰めて表示  */
+}
+
+.index {
+  display: flex;
 }
 
 .post-card {
@@ -192,6 +195,7 @@ footer {
 }
 
 /* 記事ページのスタイル */
+
 .uk-breadcrumb {
   margin-bottom: 30px;
 }
@@ -205,6 +209,9 @@ footer {
 }
 
 .uk-article {
+  max-width: 100%; /* 幅を100%に設定 */
+  min-height: 600px; /* 高さを100%に設定 */
+  margin: 0 auto;
   padding: 60px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

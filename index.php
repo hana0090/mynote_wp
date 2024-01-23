@@ -1,7 +1,10 @@
+
+
+
 <?php get_header(); ?>
 
 <div class="container">
-  <main>
+  <main class="index">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <div <?php post_class('post-card'); ?>>
         <a href="<?php the_permalink(); ?>">
@@ -12,7 +15,7 @@
           <?php endif; ?>
           <div class="card-body">
             <h4><?php the_title(); ?></h4>
-            <p><?php the_excerpt(); ?></p>
+            <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
             <span class="post-info"><?php echo get_the_date(); ?> | <?php the_category(', '); ?></span>
           </div>
         </a>
